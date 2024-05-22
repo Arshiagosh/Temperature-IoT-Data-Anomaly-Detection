@@ -1,0 +1,399 @@
+[
+    {
+        "id": "f65387446ea9de37",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d262908549462178",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "13ae4693591cabe6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8533de557afeb75d",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "427dd3eea21133a3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial Black,Arial Black,Gadget,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5664e092b94738ea",
+        "type": "ui_group",
+        "name": "Temp",
+        "tab": "8533de557afeb75d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cdd5ade411b9b944",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "b1ece4dc76a11765",
+        "type": "ui_spacer",
+        "z": "f65387446ea9de37",
+        "name": "spacer",
+        "group": "5664e092b94738ea",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "6136a75d6119e333",
+        "type": "mongodb-aleph-config",
+        "hostname": "ArminArshia:Hello@arminarshia.grq2dvg.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "MyDB",
+        "name": "Cloud"
+    },
+    {
+        "id": "89bd2b713bb56ff9",
+        "type": "mqtt in",
+        "z": "f65387446ea9de37",
+        "name": "",
+        "topic": "ArminArshia/Data",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "13ae4693591cabe6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "37f9b18cf0423bbd",
+                "9dc368b1ce121542"
+            ]
+        ]
+    },
+    {
+        "id": "9dc368b1ce121542",
+        "type": "debug",
+        "z": "f65387446ea9de37",
+        "name": "Encrypted Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "37f9b18cf0423bbd",
+        "type": "pythonshell in",
+        "z": "f65387446ea9de37",
+        "name": "Decrypt",
+        "pyfile": "C:\\Users\\GreenTeam\\Desktop\\decrypt.py",
+        "virtualenv": "",
+        "continuous": true,
+        "stdInData": true,
+        "x": 520,
+        "y": 200,
+        "wires": [
+            [
+                "ef65d97895ef777e",
+                "74f2231256b78438"
+            ]
+        ]
+    },
+    {
+        "id": "ef65d97895ef777e",
+        "type": "debug",
+        "z": "f65387446ea9de37",
+        "name": "Dectypted Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "74f2231256b78438",
+        "type": "function",
+        "z": "f65387446ea9de37",
+        "name": "get value",
+        "func": "// Check if the payload is a string\nif (typeof msg.payload === 'string') {\n    try {\n        // Parse the string into JSON\n        msg.payload = JSON.parse(msg.payload);\n        // Return the parsed JSON object\n        msg.payload=msg.payload.temp\n        return msg;\n    } catch (error) {\n        // If parsing fails, send an error message\n        return { payload: 'Error parsing JSON: ' + error.message };\n    }\n} else {\n    // If the payload is not a string, send an error message\n    return { payload: 'Input is not a string' };\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "ca4e920b10c74e84",
+                "e1a205c3e549c0c5",
+                "4c435808b3f8ab8f"
+            ]
+        ]
+    },
+    {
+        "id": "ca4e920b10c74e84",
+        "type": "ui_gauge",
+        "z": "f65387446ea9de37",
+        "name": "",
+        "group": "5664e092b94738ea",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp Guage",
+        "label": "Degree C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "50",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 970,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e1a205c3e549c0c5",
+        "type": "ui_chart",
+        "z": "f65387446ea9de37",
+        "name": "",
+        "group": "5664e092b94738ea",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temprature Trend",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "20",
+        "ymax": "60",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 950,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c435808b3f8ab8f",
+        "type": "mongodb-aleph-out",
+        "z": "f65387446ea9de37",
+        "mongodb": "6136a75d6119e333",
+        "name": "",
+        "collection": "MyCollection",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1010,
+        "y": 220,
+        "wires": [
+            [
+                "0d793777fa26dd91"
+            ]
+        ]
+    },
+    {
+        "id": "0d793777fa26dd91",
+        "type": "debug",
+        "z": "f65387446ea9de37",
+        "name": "Cloud Data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 220,
+        "wires": []
+    }
+]
